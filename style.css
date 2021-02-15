@@ -32,6 +32,12 @@ seguir comprando
 */
 
 
+/*copyright
+&copy;
+©
+
+*/
+
 nav{
     height: 58px;
     background: rgb(23, 100, 74);
@@ -43,6 +49,7 @@ nav{
     
     z-index: 10;
     transition: .5s;
+    font-family: 'Sura', serif;
 
 }
 
@@ -60,6 +67,7 @@ nav{
 }
 */
 
+
 .logo a{
     text-decoration: none;
 }
@@ -76,11 +84,13 @@ nav{
 
 .conteiner__input input{
     width: 22em;
-    height: 36px;
+    height: 35px;
     padding: 5px 40px 5px 10px;
     border: none;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
     
 
 }
@@ -88,9 +98,11 @@ nav{
 
 .conteiner__input .icon__search{
     width: 35px;
-    height: 35.5px;
+    height: 35px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .icon__search{
@@ -111,6 +123,7 @@ nav{
     border-radius: 50%;
     margin: 0px 5px;
     cursor: pointer;
+    border: none;
 }
 
 .icon__voz svg{
@@ -128,6 +141,7 @@ nav{
     margin: auto 0;
 
 }
+
 
 .carrito__perfil a{
     color: #fff;
@@ -163,9 +177,12 @@ nav{
 
 
 
-p{
+.prueba{
+    width: 300px;
+    height: 300px;
     max-width: 1000px;
     position: absolute;
+    background: red;
     
     left: 0;
     right: 0;
@@ -179,9 +196,108 @@ p{
 
 
 
+/*----BTN----*/
 
 
+#hamburguesa button{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
+#hamburguesa button span{
+    border-radius: 5px;
+    background: #ffffff;
+    display: block;
+    width: 60%;
+    margin: 0px auto;
+    height: 2.5px;
+
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#hamburguesa button.open .top-line{
+    animation-name: top-line-animation;
+}
+#hamburguesa button.open .middle-line{
+    animation-name: middle-line-animation;
+}
+#hamburguesa button.open .bottom-line{
+    animation-name: bottom-line-animation;
+}
+
+#hamburguesa button .top-line{
+    animation-name: top-line-animation-close;
+}
+#hamburguesa button .middle-line{
+    animation-name: middle-line-animation-close;
+}
+#hamburguesa button .bottom-line{
+    animation-name: bottom-line-animation-close;
+}
+
+
+@keyframes top-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+}
+@keyframes bottom-line-animation{
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+}
+@keyframes middle-line-animation{
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+@keyframes top-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+
+    50%, 100%{
+        margin: 3px auto;
+        transform: translateY(0px) rotate(0deg);
+
+    }
+}
+
+@keyframes middle-line-animation-close{
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100%{
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes bottom-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+    50%, 100%{
+        margin: 3px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
 
 
 
